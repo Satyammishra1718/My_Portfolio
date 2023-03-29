@@ -1,0 +1,75 @@
+// This is for about section transition from skill to course to education*******************************************8 
+
+var tablinks = document.getElementsByClassName("tab-links");
+var tabcontents = document.getElementsByClassName("tab-contents");
+
+
+function btnclick(event){
+    for(var tablink of tablinks){
+       tablink.classList.remove("active-link")
+    }
+
+    for(var tabcontent of tabcontents){
+        tabcontent.classList.remove("active-tab")
+    }
+
+     event.currentTarget.classList.add("active-link");
+    //  console.log(event);
+     const target=event.target.dataset.target;
+      document.querySelector(`.tab-contents#${target}`).classList.add("active-tab")
+
+   
+      
+}
+
+
+for(var tablink of tablinks){
+    tablink.addEventListener("click",btnclick);
+}
+
+
+
+
+//This javascript code is for open of menu and closing of menu***************************************************** 
+
+var sidemenu=document.getElementById("sidemenu");
+var openicon=document.getElementsByClassName("fa-bars")
+var closeicon=document.getElementsByClassName("fa-xmark")
+
+for(var openicon_ of openicon){
+    openicon_.addEventListener('click',function(){
+        sidemenu.style.right="0px";
+   })
+//    console.log(openicon_);
+}
+
+for(var closeicon_ of closeicon)
+{
+    closeicon_.addEventListener('click',function(){
+        sidemenu.style.right="-200px";
+   })
+}
+
+// reset form after submitting******************************************************************************
+
+var form=document.querySelector("#myform")
+var button=document.querySelector("#subbutton")
+var successmessage= document.querySelector("#msg");
+
+button.addEventListener('click',(event)=>{
+    event.preventDefault();
+    if(!form.reportValidity()){
+        return;
+    }
+    successmessage.innerHTML="Data Successfully Sent";
+    form.reset();
+     
+    setTimeout(()=>{ 
+        successmessage.innerHTML=" "  
+    },4000)
+   
+})
+
+
+
+
