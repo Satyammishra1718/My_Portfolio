@@ -71,5 +71,45 @@ button.addEventListener('click',(event)=>{
 })
 
 
+//  dark to light and vice-versa theme****************************************************************************
+// image and logo theme change**********************************************************************************
+
+var themeicon=document.querySelector(".fa-regular.fa-sun");
+var logotheme=document.querySelector(".logo");
+var headerdiv=document.querySelector("#header")
+
+themeicon.addEventListener("click",()=>{
+    document.body.classList.toggle("light-theme")
+    if(themeicon.classList.contains("fa-sun")) {
+        themeicon.classList.remove("fa-sun");        
+        themeicon.classList.add("fa-moon");  
+        logotheme.src="images/logo-light-theme.png" 
+        headerdiv.style.backgroundImage="url('../images/background-image-light-theme.png')"
+    }else{
+        themeicon.classList.remove("fa-moon"); 
+        themeicon.classList.add("fa-sun");  
+        logotheme.src="images/logo-dark-theme.png" 
+        headerdiv.style.backgroundImage="url('../images/background-image-dark-theme.png')"
+    }
+
+    
+})
+
+// avoiding automatic scrolling in phone screens using regex
+
+var isMobile=/iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+if(isMobile){
+    window.addEventListener("load",()=>{
+        setTimeout(()=>{
+            window.scrollTo(0,1);
+            window.scrollTo(0,0);
+        },0)
+    })
+}
+
+
+
+
+
 
 
