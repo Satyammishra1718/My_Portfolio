@@ -84,12 +84,12 @@ themeicon.addEventListener("click",()=>{
         themeicon.classList.remove("fa-sun");        
         themeicon.classList.add("fa-moon");  
         logotheme.src="images/logo-light-theme.png" 
-        headerdiv.style.backgroundImage="url('../images/background-image-light-theme.png')"
+        headerdiv.style.backgroundImage="url('./images/background-image-light-theme.png')"
     }else{
         themeicon.classList.remove("fa-moon"); 
         themeicon.classList.add("fa-sun");  
         logotheme.src="images/logo-dark-theme.png" 
-        headerdiv.style.backgroundImage="url('../images/background-image-dark-theme.png')"
+        headerdiv.style.backgroundImage="url('./images/background-image-dark-theme.png')"
     }
 
     
