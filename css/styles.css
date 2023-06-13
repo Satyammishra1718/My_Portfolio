@@ -396,7 +396,7 @@
 .contact-left p i{
    color: var(--lookcolour);
    margin-right: 15px;
-   font-size: 25px;
+   font-size: 20px;
 }
 
 .social-icons{
@@ -529,6 +529,22 @@ nav .fa-solid{
   #services{
    padding: 100px 0 30px;
  }
+ .layer h3{
+   font-weight: 500;
+   margin-bottom: 10px;
+}
+.layer a{
+   margin-top: 5px;
+   color: var(--lookcolour);
+   text-decoration: none;
+   font-size: 18px;
+   line-height: 60px;
+   background: var(--primary-color);
+   width: 60px;
+   height: 60px;
+   border-radius: 50%;
+   text-align: center;
+}
   
 }
 #msg{
