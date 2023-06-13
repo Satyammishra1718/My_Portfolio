@@ -74,7 +74,7 @@ button.addEventListener('click',(event)=>{
 //  dark to light and vice-versa theme****************************************************************************
 // image and logo theme change**********************************************************************************
 
-var themeicon=document.querySelector(".fa-regular.fa-sun");
+var themeicon=document.querySelector(".fa-sun");
 var logotheme=document.querySelector(".logo");
 var headerdiv=document.querySelector("#header")
 
