@@ -61,7 +61,7 @@ button.addEventListener('click',(event)=>{
     if(!form.reportValidity()){
         return;
     }
-    successmessage.innerHTML="Data Successfully Sent";
+    successmessage.innerHTML="Message Successfully Sent";
     form.reset();
      
     setTimeout(()=>{ 
